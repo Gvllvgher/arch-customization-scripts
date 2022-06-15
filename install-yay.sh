@@ -8,7 +8,7 @@ chown -R justin:justin /opt/yay-git > /dev/null
 
 su justin<<'EOF'
 set -e
-cd /opt/yay
+cd /opt/yay-git
 makepkg -si --noconfirm
 exit
 EOF
