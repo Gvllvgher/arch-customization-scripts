@@ -31,16 +31,6 @@ Create `.config` directory
 mkdir .config
 ```
 
-***
-Might not need this
-
-Copy conifguration file
-```
-cp /etc/xdg/awesome/rc.lua ~/.config/awesome
-```
-***
-
-
 Make awesome directory
 ```
 mkdir ~/.config/awesome
@@ -64,7 +54,7 @@ cp rc.lua.template rc.lua
 
 Awesome Components from https://github.com/lcpz/lain
 ```
-pacman -Sy lain-git
+yay -Sy lain-git
 ```
 
 modify RC.lua
