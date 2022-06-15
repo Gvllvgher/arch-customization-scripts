@@ -17,7 +17,7 @@ chown -R justin:justin /home/justin/.config > /dev/null
 
 su justin<<'EOF'
 set -e
-yay -Sy lain-git ttf-google-fonts-git --noconfirm
+yay -Sy lain-git ttf-google-fonts-git ttf-meslo-nerd-font-powerlevel10k --noconfirm
 exit
 EOF
 
