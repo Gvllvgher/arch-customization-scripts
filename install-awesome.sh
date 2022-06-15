@@ -7,6 +7,7 @@ mkdir /home/justin/.config  > /dev/null
 mkdir /home/justin/.config/awesome  > /dev/null
 git -C /temp clone --recurse-submodules --remote-submodules --depth 1 -j 2 https://github.com/lcpz/awesome-copycats.git
 mv -bv /temp/awesome-copycats/{*,.[^.]*} /home/justin/.config/awesome; rm -rf /temp/awesome-copycats
+chown -R justin:justin /home/justin/.config/awesome > /dev/null
 
 cp /temp/arch-customization-scripts/rc.lua /home/justin/.config/awesome/rc.lua
 
