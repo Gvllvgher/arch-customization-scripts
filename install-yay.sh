@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "[multilib]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist"
+echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 git -C /opt clone https://aur.archlinux.org/yay-git.git > /dev/null
 chown -R justin:justin /opt/yay-git > /dev/null
