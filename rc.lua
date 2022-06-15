@@ -550,6 +550,9 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end,
               {description = "run prompt", group = "launcher"}),
 
+    awful.key({ modkey, "Shift" }, "b", function () awful.util.spawn("firefox") end,
+              {description = "firefox", group = "www"}),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
