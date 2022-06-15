@@ -1,7 +1,7 @@
 #! /bin/bash
 
 pacman -Sy xorg-server xorg-xinit xterm awesome xorg-xclock firefox xfce4-taskmanager xfce4-power-manager xfce4-settings scrot pcmanfm kitty nitrogen picom file-roller volumeicon dmenu numlockx --noconfirm > /dev/null
-echo “exec awesome” > /home/justin/.xinitrc
+echo "exec awesome" > /home/justin/.xinitrc
 chown justin:justin /home/justin/.xinitrc
 
 mkdir /home/justin/.config  > /dev/null
