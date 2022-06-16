@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -Sy sddm qt5-quickcontrols2 qt5-graphicaleffects --noconfirm
+pacman -Sy sddm qt5-quickcontrols2 qt5-graphicaleffects --noconfirm > /dev/null
 
 mkdir /etc/sddm.conf.d
 
