@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S libx11 libxft libxinerama xorg-server xorg-xinit terminus-font
+pacman -S libx11 libxft libxinerama xorg-server xorg-xinit freetype2 fontconfig terminus-font
 
 mkdir -p /usr/share/xsessions
 
