@@ -21,4 +21,16 @@ yay -Sy lain-git ttf-google-fonts-git ttf-meslo-nerd-font-powerlevel10k --noconf
 exit
 EOF
 
+tee -a /home/justin/.zprofile <<EOF
+if [ -z "${DISPLAY}"  ] && [ "${XDG_VTNR}" -eq 1  ]; then
+      exec startx
+fi
+EOF
+
+tee -a /home/justin/.bash_profile <<EOF
+if [ -z "${DISPLAY}"  ] && [ "${XDG_VTNR}" -eq 1  ]; then
+      exec startx
+fi
+EOF
+
 echo "installed awesomewm"
