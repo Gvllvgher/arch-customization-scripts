@@ -61,3 +61,10 @@ modify RC.lua
 ```
 local lain = require("lain")
 ```
+
+
+
+# Got lost for a minute, notes continued
+Customizing chadwm is going to take a fork of the repo
+ - add keybind for firefox
+ - add xrdb merge for st .xresources
