@@ -2,7 +2,7 @@
 pacman -Sy dash imlib2 xorg-xsetroot hsetroot > /dev/null
 
 su justin<<EOF
-yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono ttf-material-design-icons
+yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono ttf-material-design-icons > /dev/null
 git clone https://github.com/siduck/chadwm --depth 1  ~/.config
 cd ~/.config/chadwm/chadwm
 mv eww ~/.config
