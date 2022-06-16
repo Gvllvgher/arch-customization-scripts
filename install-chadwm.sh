@@ -3,7 +3,7 @@ pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama xorg-ser
 
 su justin<<EOF
 yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono ttf-material-design-icons --noconfirm > /dev/null
-git clone https://github.com/siduck/chadwm --depth 1  ~/.config
+git clone https://github.com/siduck/chadwm --depth 1  ~/.config/chadwm
 cd ~/.config/chadwm/chadwm
 mv eww ~/.config
 sudo make install
