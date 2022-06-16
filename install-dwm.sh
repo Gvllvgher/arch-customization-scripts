@@ -2,6 +2,8 @@
 
 pacman -S libx11 libxft libxinerama xorg-server xorg-xinit terminus-font
 
+cp /temp/arch-customization-scripts/dwm/dwm.desktop /usr/share/xsessions/
+
 su justin<<EOF
 mkdir -p ~/.local/src
 
