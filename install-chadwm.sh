@@ -5,7 +5,7 @@ su justin<<EOF
 yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono ttf-material-design-icons --noconfirm > /dev/null
 git clone https://github.com/siduck/chadwm --depth 1  ~/.config/chadwm
 cd ~/.config/chadwm/chadwm
-mv eww ~/.config
+mv ~/.config/chadwm/eww ~/.config/
 sudo make install
 exit
 EOF
