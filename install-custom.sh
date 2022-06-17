@@ -5,8 +5,8 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";  )" &> /dev/null &&
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Set permissions
-chmod +x "$SCRIPT_DIR/*.sh" > /dev/null
-chmod +777 "$SCRIPT_DIR/*.sh" > /dev/null
+chmod +x $SCRIPT_DIR/*.sh > /dev/null
+chmod +777 $SCRIPT_DIR/*.sh > /dev/null
 
 # Execute install-sddm.sh
 $SCRIPT_DIR/install-sddm.sh
