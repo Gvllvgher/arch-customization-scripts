@@ -4,13 +4,13 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";   )" &> /dev/null &
 
 pacman -Sy dash imlib2 xorg-xsetroot hsetroot doas libx11 libxft libxinerama feh rofi thunar xfce4-power-manager xorg-server xorg-xinit freetype2 fontconfig pacman-contrib xterm --noconfirm > /dev/null
 
-echo "permit :wheel" >> doas.conf
+echo "permit :wheel" > doas.conf
 
 su justin<<'EOF'
 set -e
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
-curl -O https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesignIconsDesktop.ttf
+wget https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesignIconsDesktop.ttf
 fc-cache -f -v
 yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono picom-ibhagwan-git --noconfirm > /dev/null
 git clone https://github.com/siduck/chadwm --depth 1  ~/.config/chadwm
