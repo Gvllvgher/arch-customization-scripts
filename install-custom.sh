@@ -10,8 +10,8 @@ chmod +777 $SCRIPT_DIR/*.sh > /dev/null
 
 # Execute install-sddm.sh
 $SCRIPT_DIR/install-sddm.sh
-$SCRIPT_DIR/install-st.sh
 $SCRIPT_DIR/install-chadwm.sh
+$SCRIPT_DIR/install-st.sh
 
 head -n -1 /etc/sudoers > /etc/sudoers.bak
-vm /etc/sudoers.bak /etc/sudoers
+mv /etc/sudoers.bak /etc/sudoers

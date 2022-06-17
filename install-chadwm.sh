@@ -12,7 +12,7 @@ mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 curl -O https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesignIconsDesktop.ttf
 fc-cache -f -v
-yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono ttf-material-design-icons picom-ibhagwan-git --noconfirm > /dev/null
+yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono picom-ibhagwan-git --noconfirm > /dev/null
 git clone https://github.com/siduck/chadwm --depth 1  ~/.config/chadwm
 mv ~/.config/chadwm/eww ~/.config/
 cd ~/.config/chadwm/chadwm
