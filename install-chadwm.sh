@@ -14,7 +14,7 @@ wget https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesign
 fc-cache -f -v
 mkdir -p ~/Pictures/wall
 cd ~/Pictures/wall
-wget -o gruv.png https://github.com/siduck/chadwm/raw/screenshots/screenshots/chad.png
+wget https://github.com/siduck/chadwm/raw/screenshots/screenshots/chad.png
 yay -Sy nerd-fonts-jetbrains-mono ttf-jetbrains-mono picom-ibhagwan-git --noconfirm > /dev/null
 git clone https://github.com/siduck/chadwm --depth 1  ~/.config/chadwm
 mv ~/.config/chadwm/eww ~/.config/
