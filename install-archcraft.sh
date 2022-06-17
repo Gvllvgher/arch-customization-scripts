@@ -12,7 +12,7 @@ pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama feh rofi
 su justin<<EOF
 set -e
 cd ~
-yay -Sy ksuperkey betterlockscreen picom-ibhagwan-git xfce-polkit --noconfirm > /dev/null
+yay -Sy ksuperkey betterlockscreen picom-ibhagwan-git xfce-polkit nerd-fonts-jetbrains-mono ttf-jetbrains-mono --noconfirm > /dev/null
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 wget https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesignIconsDesktop.ttf
