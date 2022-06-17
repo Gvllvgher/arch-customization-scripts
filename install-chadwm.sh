@@ -3,7 +3,7 @@ pacman -Sy dash imlib2 xorg-xsetroot hsetroot doas libx11 libxft libxinerama feh
 
 echo "permit :wheel" >> doas.conf
 
-su justin<<EOF
+su justin<<'EOF'
 set -e
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
