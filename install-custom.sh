@@ -15,4 +15,4 @@ $SCRIPT_DIR/install-st.sh
 $SCRIPT_DIR/configure-vim.sh
 
 head -n -1 /etc/sudoers > /etc/sudoers.bak
-vm /etc/sudoers.bak /etc/sudoers
+mv /etc/sudoers.bak /etc/sudoers
