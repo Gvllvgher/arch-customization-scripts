@@ -1,4 +1,7 @@
 #! /bin/bash
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";   )" &> /dev/null && pwd 2> /dev/null;   )";
+
 pacman -Sy dash imlib2 xorg-xsetroot hsetroot doas libx11 libxft libxinerama feh rofi thunar xfce4-power-manager xorg-server xorg-xinit freetype2 fontconfig pacman-contrib xterm --noconfirm > /dev/null
 
 echo "permit :wheel" >> doas.conf
@@ -20,4 +23,4 @@ EOF
 echo "installed chadwm"
 
 mkdir -p /usr/share/xsessions
-cp /temp/arch-customization-scripts/chadwm/chadwm.desktop /usr/share/xsessions/
+cp $SCRIPT_DIR/chadwm/chadwm.desktop /usr/share/xsessions/
