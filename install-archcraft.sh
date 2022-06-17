@@ -7,10 +7,11 @@ cp $SCRIPT_DIR/vim/.vimrc /home/justin/
 chown -R justin:justin /home/justin/.vim_runtime
 chown justin:justin /home/justin/.vimrc
 
-pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama feh rofi thunar xfce4-power-manager xorg-server xorg-xinit freetype2 light fontconfig pacman-contrib xterm --noconfirm > /dev/null
+pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama feh rofi thunar xfce4-power-manager xorg-server xorg-xinit freetype2 light fontconfig pacman-contrib xterm alacritty geany dunst polybar mpd mpc maim xclip viewnior --noconfirm > /dev/null
 
 su justin<<EOF
 set-e
+yay -Sy ksuperkey betterlockscreen picom-ibhagwan-git xfce-polkit --noconfirm > /dev/null
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 wget https://github.com/Templarian/MaterialDesign-Font/raw/master/MaterialDesignIconsDesktop.ttf
