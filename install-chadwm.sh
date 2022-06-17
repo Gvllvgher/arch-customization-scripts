@@ -1,5 +1,7 @@
 #! /bin/bash
-pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama feh ksuperkey rofi thunar xfce4-power-manager xfce-polkit xorg-server xorg-xinit freetype2 fontconfig --noconfirm > /dev/null
+pacman -Sy dash imlib2 xorg-xsetroot hsetroot doas libx11 libxft libxinerama feh ksuperkey rofi thunar xfce4-power-manager xfce-polkit xorg-server xorg-xinit freetype2 fontconfig pacman-contrib xterm --noconfirm > /dev/null
+
+echo "permit :wheel" >> doas.conf
 
 su justin<<EOF
 set -e
