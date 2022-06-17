@@ -10,9 +10,9 @@ chmod +777 $SCRIPT_DIR/*.sh > /dev/null
 
 # Execute install-sddm.sh
 $SCRIPT_DIR/install-sddm.sh
-$SCRIPT_DIR/install-chadwm.sh
-$SCRIPT_DIR/install-st.sh
-$SCRIPT_DIR/configure-vim.sh
+$SCRIPT_DIR/install-archcraft.sh
+#$SCRIPT_DIR/install-st.sh
+#$SCRIPT_DIR/configure-vim.sh
 
 head -n -1 /etc/sudoers > /etc/sudoers.bak
 mv /etc/sudoers.bak /etc/sudoers

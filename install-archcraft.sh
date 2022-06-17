@@ -28,7 +28,9 @@ chown -R justin:justin /home/justin/.config
 
 su justin<<EOF
 set -e
-~/.config/archcraft-skeleton/build.sh
-~/.config/archcraft-dwm/build.sh
+cd ~/.config/archcraft-skeleton
+./build.sh
+cd ~/.config/archcraft-dwm
+./build.sh
 exit
 EOF
