@@ -10,7 +10,8 @@ chown justin:justin /home/justin/.vimrc
 pacman -Sy dash imlib2 xorg-xsetroot hsetroot libx11 libxft libxinerama feh rofi thunar xfce4-power-manager xorg-server xorg-xinit freetype2 light fontconfig pacman-contrib xterm alacritty geany dunst polybar mpd mpc maim xclip viewnior --noconfirm > /dev/null
 
 su justin<<EOF
-set-e
+set -e
+cd ~
 yay -Sy ksuperkey betterlockscreen picom-ibhagwan-git xfce-polkit --noconfirm > /dev/null
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
@@ -30,7 +31,11 @@ su justin<<EOF
 set -e
 cd ~/.config/archcraft-skeleton
 ./build.sh
-cd ~/.config/archcraft-dwm
-./build.sh
+cd ~/.config/archcraft-skeleton/archcraft-skeleton
+makepkg -si --noconfirm > /dev/null
+cd ~/.config/archcraft-dwm/archcraft-st
+makepkg -si --noconfirm > /dev/null
+cd ~/.config/archcraft-dwm/archcraft-dwm
+makepkg -si --noconfirm > /dev/null
 exit
 EOF
