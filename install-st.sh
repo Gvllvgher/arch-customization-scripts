@@ -1,6 +1,6 @@
 #! /bin/bash
 
-su justin<<EOF
+su justin<<'EOF'
 set -e
 cd ~/.config
 git clone https://github.com/siduck/st
