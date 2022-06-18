@@ -3,7 +3,9 @@
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";    )" &> /dev/null && pwd 2> /dev/null;    )";
 
 cp $SCRIPT_DIR/zsh/.zshrc /home/justin/
+cp $SCRIPT_DIR/zsh/.p10k.zsh /home/justin
 chown justin:justin /home/justin/.zshrc
+chown justin:justin /home/justin/.p10k.zsh
 
 su justin<<EOF
 set -e
