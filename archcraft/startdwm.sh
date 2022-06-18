@@ -26,7 +26,7 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Restore wallpaper
-hsetroot -cover /usr/share/backgrounds/nordic.jpg
+feh --bg-fill /usr/share/backgrounds/nordic.jpg
 
 # Lauch dwmbar
 /home/justin/.config/dwmbar.sh &
