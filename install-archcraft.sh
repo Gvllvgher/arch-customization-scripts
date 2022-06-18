@@ -39,3 +39,11 @@ cd ~/.config/archcraft-dwm/archcraft-dwm
 makepkg -si --noconfirm > /dev/null
 exit
 EOF
+
+# Custom autostart.sh
+cp $SCRIPT_DIR/archcraft/startdwm.sh /home/justin/.config/
+cp $SCRIPT_DIR/archcraft/dwm.desktop /usr/share/xsessions/
+chown justin:justin /home/justin/.config/startdwm.sh
+
+
+
