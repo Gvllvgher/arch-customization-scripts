@@ -44,15 +44,19 @@ EOF
 cp $SCRIPT_DIR/archcraft/startdwm.sh /home/justin/.config/
 cp $SCRIPT_DIR/archcraft/dwmbar.sh /home/justin/.config/
 cp $SCRIPT_DIR/archcraft/dwm.desktop /usr/share/xsessions/
-cp -Rf $SCRIPT_DIR/xfce4 /home/justin/.config/
-cp -Rf $SCRIPT_DIR/Arc-Dark /usr/share/themes/
-cp -Rf $SCRIPT_DIR/xresources/.Xresources.d /home/justin/
+cp -rf $SCRIPT_DIR/xfce4 /home/justin/.config/
+cp -rf $SCRIPT_DIR/Arc-Dark /usr/share/themes/
+cp -rf $SCRIPT_DIR/xresources/.Xresources.d /home/justin/
 cp $SCRIPT_DIR/xresources/.Xresources /home/justin/
+cp -rf $SCRIPT_DIR/gtk/gtk-3.0 /home/justin/.config/
+cp $SCRIPT_DIR/gtk/.gtkrc-2.0 /home/justin/
 chown -R justin:justin /home/justin/.Xresources.d
 chown justin:justin /home/justin/.Xresources
 chown -R justin:justin /home/justin/.config/xfce4
 chown justin:justin /home/justin/.config/startdwm.sh
 chown justin:justin /home/justin/.config/dwmbar.sh
+chown -R justin:justin /home/justin/.config/gtk-3.0
+chown justin:justin /home/justin/.gtkrc-2.0
 
 # Set xfce theme
 su justin<<EOF
