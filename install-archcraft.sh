@@ -44,6 +44,9 @@ EOF
 cp $SCRIPT_DIR/archcraft/startdwm.sh /home/justin/.config/
 cp $SCRIPT_DIR/archcraft/dwmbar.sh /home/justin/.config/
 cp $SCRIPT_DIR/archcraft/dwm.desktop /usr/share/xsessions/
+cp -Rf $SCRIPT_DIR/xfce4 /home/justin/.config/
+cp -Rf $SCRIPT_DIR/Arc-Dark /usr/share/themes/
+chown -R justin:justin /home/justin/.config/xfce4
 chown justin:justin /home/justin/.config/startdwm.sh
 chown justin:justin /home/justin/.config/dwmbar.sh
 
