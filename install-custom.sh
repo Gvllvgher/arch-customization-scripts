@@ -12,8 +12,8 @@ chmod +777 $SCRIPT_DIR/*.sh > /dev/null
 $SCRIPT_DIR/install-sddm.sh
 $SCRIPT_DIR/install-archcraft.sh
 $SCRIPT_DIR/install-powerlevel10k.sh
-$SCRIPT_DIR/install-tools.sh
 $SCRIPT_DIR/install-backgrounds.sh
+$SCRIPT_DIR/install-tools.sh
 #$SCRIPT_DIR/install-st.sh
 #$SCRIPT_DIR/configure-vim.sh
 
