@@ -54,5 +54,9 @@ chown -R justin:justin /home/justin/.config/xfce4
 chown justin:justin /home/justin/.config/startdwm.sh
 chown justin:justin /home/justin/.config/dwmbar.sh
 
-
-
+# Set xfce theme
+su justin<<EOF
+set -e
+xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Dark"
+exit
+EOF
