@@ -24,7 +24,7 @@ wlan() {
 }
 
 eth() {
-	case "$(cat /sys/class/net/enp*/operstate 2>/dev/null)" in
+	case "$(cat /sys/class/net/en*/operstate 2>/dev/null)" in
 		up) printf "^c#3b414d^^b#7aa2f7^  ^d^%s" " ^c#7aa2f7^Connected " ;;
 		down) printf "^c#3b414d^^b#E06C75^  ^d^%s" " ^c#E06C75^Disconnected " ;;
 	esac
