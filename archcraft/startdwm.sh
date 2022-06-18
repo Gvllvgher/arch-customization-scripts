@@ -44,5 +44,8 @@ exec mpd &
 
 ## -----------------------------------------------
 
+# Set .Xresources
+xrdb merge /home/justin/.Xresources
+
 # Launch DWM
 dwm
