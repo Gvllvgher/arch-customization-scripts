@@ -29,7 +29,7 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 hsetroot -cover /usr/share/archcraft/dwm/wallpapers/dwm_3.png
 
 # Lauch dwmbar
-/usr/share/archcraft/dwm/bin/dwmbar.sh &
+/home/justin/.config/dwmbar.sh &
 
 # Lauch notification daemon
 /usr/share/archcraft/dwm/bin/dwmdunst.sh

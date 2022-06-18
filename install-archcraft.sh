@@ -42,8 +42,10 @@ EOF
 
 # Custom autostart.sh
 cp $SCRIPT_DIR/archcraft/startdwm.sh /home/justin/.config/
+cp $SCRIPT_DIR/archcraft/dwmbar.sh /home/justin/.config/
 cp $SCRIPT_DIR/archcraft/dwm.desktop /usr/share/xsessions/
 chown justin:justin /home/justin/.config/startdwm.sh
+chown justin:justin /home/justin/.config/dwmbar.sh
 
 
 
