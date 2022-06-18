@@ -23,8 +23,8 @@ wlan() {
 	esac
 }
 
-wlan() {
-	case "$(cat /sys/class/net/en*/operstate 2>/dev/null)" in
+eth() {
+	case "$(cat /sys/class/net/enp*/operstate 2>/dev/null)" in
 		up) printf "^c#3b414d^^b#7aa2f7^  ^d^%s" " ^c#7aa2f7^Connected " ;;
 		down) printf "^c#3b414d^^b#E06C75^  ^d^%s" " ^c#E06C75^Disconnected " ;;
 	esac
@@ -91,5 +91,5 @@ while true; do
   [ "$interval" == 0 ] || [ $(("$interval" % 3600)) == 0 ] && updates=$(updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$(battery) $(brightness) $(cpu_info) $(memory) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$(battery) $(brightness) $(cpu_info) $(memory) $(wlan) $(eth) $(clock)"
 done
