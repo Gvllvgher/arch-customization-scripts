@@ -9,7 +9,7 @@ pacman -Sy firefox nm-connection-editor --noconfirm > /dev/null
 su justin<<EOF
 set -e
 cd ~
-yay -Sy networkmanager-dmenu-git --noconfirm > /dev/null
+yay -Sy networkmanager-dmenu-git vmware-workstation --noconfirm > /dev/null
 exit
 EOF
 
