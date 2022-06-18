@@ -3,7 +3,7 @@
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";    )" &> /dev/null && pwd 2> /dev/null;    )";
 
 # Pacman
-pacman -Sy firefox --noconfirm > /dev/null
+pacman -Sy firefox nm-connection-editor --noconfirm > /dev/null
 
 # yay
 su justin<<EOF
