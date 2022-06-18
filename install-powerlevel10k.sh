@@ -7,6 +7,12 @@ chown justin:justin /home/justin/.zshrc
 
 su justin<<EOF
 set -e
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/justin/.oh-my-zsh/custom/themes/powerlevel10k
+mkdir -p ~/.oh-my-zsh/custom/themes
+mkdir -p ~/.oh-my-zsh/custom/plugins
+cd ~/.oh-my-zsh/custom/themes
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 exit
 EOF
