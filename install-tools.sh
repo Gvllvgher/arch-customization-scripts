@@ -2,8 +2,9 @@
 
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";    )" &> /dev/null && pwd 2> /dev/null;    )";
 
+
 # Pacman
-pacman -Sy firefox nm-connection-editor --noconfirm > /dev/null
+pacman -Sy firefox nm-connection-editor htop alacritty --noconfirm > /dev/null
 
 # yay
 su justin<<EOF
@@ -14,4 +15,8 @@ exit
 EOF
 
 cp -rf $SCRIPT_DIR/networkmanager-dmenu /home/justin/.config/
+cp -rf $SCRIPT_DIR/htop /home/justin/.config/
+cp -rf $SCRIPT_DIR/alacritty /home/justin/.config/
 chown -R justin:justin /home/justin/.config/networkmanager-dmenu
+chown -R justin:justin /home/justin/.config/alacritty
+chown -R justin:justin /home/justin/.config/htop
