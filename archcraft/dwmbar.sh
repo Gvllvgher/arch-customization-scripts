@@ -18,15 +18,15 @@ memory() {
 ## Wi-fi
 wlan() {
 	case "$(cat /sys/class/net/w*/operstate 2>/dev/null)" in
-		up) printf "^c#3b414d^^b#7aa2f7^  ^d^%s" " ^c#7aa2f7^Connected " ;;
+		up) printf "^c#3b414d^^b#7aa2f7^   ^d^%s" " ^c#7aa2f7^Connected " ;;
 		down) printf "^c#3b414d^^b#E06C75^ 睊 ^d^%s" " ^c#E06C75^Disconnected " ;;
 	esac
 }
 
 eth() {
 	case "$(cat /sys/class/net/en*/operstate 2>/dev/null)" in
-		up) printf "^c#3b414d^^b#7aa2f7^  ^d^%s" " ^c#7aa2f7^Connected " ;;
-		down) printf "^c#3b414d^^b#E06C75^  ^d^%s" " ^c#E06C75^Disconnected " ;;
+		up) printf "^c#3b414d^^b#7aa2f7^   ^d^%s" " ^c#7aa2f7^Connected " ;;
+		down) printf "^c#3b414d^^b#E06C75^   ^d^%s" " ^c#E06C75^Disconnected " ;;
 	esac
 }
 
