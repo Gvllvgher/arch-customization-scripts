@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
+
+# Install Dependencies
+pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter
+
+vesa fbdev
+
+# Install Qtile and lightdm
+pacman -S qtile lightdm
+
+# Enable the lightdm service for autostart
+sudo systemctl enable lightdm
+
+# Copy default configuration
+mkdir -p ~/.config/qtile
+cp /usr/share/doc/qtile/default_config.py ~/.config/qtile/config.py
+
+# Xauthority setup
+rm ~/.Xauthority # Remove any old copies
+touch ~/.Xauthority # xauth complains unless file exists
+xauth generate :0 . trusted # Create a key
+xauth add ${HOST}:0 . $(xxd -l 16 -p /dev/urandom) # Generate key
+
