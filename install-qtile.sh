@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /bin/bash
 
 # Parameters
 while getopts ':u:' opt; do
@@ -26,13 +26,13 @@ fi
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
 # Install Dependencies
-pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-power-manager picom
+pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-power-manager picom --noconfirm > /dev/null
 
 # Install Qtile and lightdm
-pacman -S qtile lightdm
+pacman -S qtile lightdm --noconfirm > /dev/null
 
 # Enable the lightdm service for autostart
-systemctl enable lightdm
+systemctl enable lightdm > /dev/null
 
 # Copy default configuration
 mkdir -p /home/$LOCAL_USER/.config/qtile
