@@ -26,7 +26,13 @@ fi
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
 # Install Dependencies
-pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-power-manager picom nodejs --noconfirm > /dev/null
+pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-power-manager xorg-mkfontscale picom nodejs --noconfirm > /dev/null
+
+su $LOCAL_USER<<'EOF'
+set -e
+yay -Sy nerd-fonts-jetbrains-mono
+exit
+EOF
 
 # Install Qtile and lightdm
 pacman -S qtile lightdm --noconfirm > /dev/null
