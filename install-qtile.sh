@@ -37,6 +37,12 @@ pacman -S qtile lightdm --noconfirm > /dev/null
 # Enable the lightdm service for autostart
 systemctl enable lightdm > /dev/null
 
+su $LOCAL_USER<<'EOF'
+set -e
+yay -S nerd-fonts-jetbrains-mono --noconfir > /dev/null
+exit
+EOF
+
 # Copy default configuration
 mkdir -p /home/$LOCAL_USER/.config/qtile
 cp /usr/share/doc/qtile/default_config.py /home/$LOCAL_USER/.config/qtile/config.py
