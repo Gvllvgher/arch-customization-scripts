@@ -39,7 +39,7 @@ systemctl enable lightdm > /dev/null
 
 su $LOCAL_USER<<'EOF'
 set -e
-yay -S nerd-fonts-jetbrains-mono --noconfir > /dev/null
+yay -S nerd-fonts-jetbrains-mono --noconfirm > /dev/null
 exit
 EOF
 
