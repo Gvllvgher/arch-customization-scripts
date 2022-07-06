@@ -31,12 +31,6 @@ pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-
 # Install Fonts
 pacman -S ttf-dejavu ttf-liberation ttf-bitstream-vera cantarell-fonts noto-fonts opendesktop-fonts ttf-opensans ttf-croscore ttf-carlito ttf-caladea ttf-jetbrains-mono --noconfirm > /dev/null
 
-su $LOCAL_USER<<'EOF'
-set -e
-yay -Sy nerd-fonts-jetbrains-mono --noconfirm
-exit
-EOF
-
 # Install Qtile and lightdm
 pacman -S qtile lightdm --noconfirm > /dev/null
 
