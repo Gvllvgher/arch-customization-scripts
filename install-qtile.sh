@@ -30,7 +30,7 @@ pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-
 
 su $LOCAL_USER<<'EOF'
 set -e
-yay -Sy nerd-fonts-jetbrains-mono
+yay -Sy nerd-fonts-jetbrains-mono --noconfirm
 exit
 EOF
 
