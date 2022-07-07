@@ -39,7 +39,7 @@ systemctl enable sddm > /dev/null
 
 su $LOCAL_USER<<'EOF'
 set -e
-yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme --noconfirm > /dev/null
+yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
 exit
 EOF
 
