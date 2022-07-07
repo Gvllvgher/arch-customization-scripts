@@ -32,10 +32,10 @@ pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-
 pacman -S ttf-dejavu ttf-liberation ttf-bitstream-vera cantarell-fonts noto-fonts opendesktop-fonts ttf-opensans ttf-croscore ttf-carlito ttf-caladea ttf-jetbrains-mono --noconfirm > /dev/null
 
 # Install Qtile and lightdm
-pacman -S qtile lightdm --noconfirm > /dev/null
+pacman -S qtile sddm --noconfirm > /dev/null
 
 # Enable the lightdm service for autostart
-systemctl enable lightdm > /dev/null
+systemctl enable sddm > /dev/null
 
 su $LOCAL_USER<<'EOF'
 set -e
