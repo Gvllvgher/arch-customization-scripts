@@ -37,8 +37,8 @@ pacman -S qtile --noconfirm > /dev/null
 # Enable the lightdm service for autostart
 systemctl enable lightdm > /dev/null
 
-sed -i "s/#greeter-session=example-gtk-gnome/greeter-session=lightdm-slick-greeter" /etc/lightdm/lightdm.conf
-sed -i "s/#user-session=default/user-session=qtile" /etc/lightdm/lightdm.conf
+sed -i "s/#greeter-session=example-gtk-gnome/greeter-session=lightdm-slick-greeter/g" /etc/lightdm/lightdm.conf
+sed -i "s/#user-session=default/user-session=qtile/g" /etc/lightdm/lightdm.conf
 
 # Enable betterlockscreen service so system locks when woken from sleep
 systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
