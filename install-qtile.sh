@@ -42,9 +42,13 @@ sed -i "s/#greeter-session=example-gtk-gnome/greeter-session=lightdm-slick-greet
 sed -i "s/#user-session=default/user-session=qtile/g" /etc/lightdm/lightdm.conf
 
 # Configure lightdm-slick-greeter
+mkdir -p /usr/share/backgrounds
+cp $SCRIPT_DIR/arch-black-4k.png /usr/share/backgrounds
+
 cat <<EOT >> /etc/lightdm/slick-greeter.conf
 [Greeter]
-draw-user-backgrounds=true
+background=/usr/share/backgrounds/arch-black-4k.png
+draw-user-backgrounds=false
 draw-grid=true
 theme-name=Arc-Dark
 icon-theme=Oranchelo
