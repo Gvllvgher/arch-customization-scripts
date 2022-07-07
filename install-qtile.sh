@@ -37,6 +37,9 @@ pacman -S qtile sddm --noconfirm > /dev/null
 # Enable the lightdm service for autostart
 systemctl enable sddm > /dev/null
 
+# Enable betterlockscreen service so system locks when woken from sleep
+systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
+
 su $LOCAL_USER<<'EOF'
 set -e
 yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
