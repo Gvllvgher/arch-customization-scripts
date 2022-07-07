@@ -26,16 +26,16 @@ fi
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
 # Install Dependencies
-pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm-gtk-greeter xfce4-power-manager xorg-mkfontscale picom nodejs feh papirus-icon-theme arc-gtk-theme rofi --noconfirm > /dev/null
+pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm lightdm-gtk-greeter xfce4-power-manager xorg-mkfontscale picom nodejs feh papirus-icon-theme arc-gtk-theme rofi --noconfirm > /dev/null
 
 # Install Fonts
 pacman -S ttf-dejavu ttf-liberation ttf-bitstream-vera cantarell-fonts noto-fonts opendesktop-fonts ttf-opensans ttf-croscore ttf-carlito ttf-caladea ttf-jetbrains-mono --noconfirm > /dev/null
 
 # Install Qtile and lightdm
-pacman -S qtile sddm --noconfirm > /dev/null
+pacman -S qtile --noconfirm > /dev/null
 
 # Enable the lightdm service for autostart
-systemctl enable sddm > /dev/null
+systemctl enable lightdm > /dev/null
 
 # Enable betterlockscreen service so system locks when woken from sleep
 systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
