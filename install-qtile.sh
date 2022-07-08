@@ -56,14 +56,14 @@ show-a11y=false
 background-color=#ffffff
 EOT
 
-# Enable betterlockscreen service so system locks when woken from sleep
-systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
-
-su $LOCAL_USER<<'EOF'
+su $LOCAL_USER<<EOF
 set -e
 yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
 exit
 EOF
+
+# Enable the betterlockscreen service
+systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
 
 # Copy default configuration
 mkdir -p /home/$LOCAL_USER/.config/qtile
