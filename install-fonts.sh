@@ -45,10 +45,10 @@ if [[ -z "$LOCAL_USER" ]]; then
     fi
 fi
 
-pacman -S $pacmanFonts
+pacman -S $pacmanFonts --noconfirm > /dev/null
 
 su $LOCAL_USER<<EOF
 set -e
-yay -S ${yayFonts}
+yay -S ${yayFonts} --noconfirm > /dev/null
 exit
 EOF
