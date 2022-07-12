@@ -26,7 +26,7 @@ fi
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
 # Install Dependencies
-pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm lightdm-slick-greeter xfce4-power-manager xorg-mkfontscale picom nodejs feh papirus-icon-theme arc-gtk-theme alsa-utils dmenu dunst rofi python-psutil python-dbus-next pulseaudio pavucontrol htop firefox flameshot thunar --noconfirm > /dev/null
+pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm lightdm-slick-greeter xfce4-power-manager xorg-mkfontscale picom nodejs feh papirus-icon-theme arc-gtk-theme alsa-utils dmenu dunst rofi python-psutil python-dbus-next pulseaudio pavucontrol htop firefox flameshot thunar starship --noconfirm > /dev/null
 
 # Install Fonts
 $SCRIPT_DIR/install-fonts.sh -u $LOCAL_USER
