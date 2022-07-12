@@ -59,6 +59,7 @@ EOT
 su $LOCAL_USER<<EOF
 set -e
 yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
+xfconf-query -c xfce4-session -p /general/LockCommand -s "betterlockscreen -l" --create -t string
 exit
 EOF
 
