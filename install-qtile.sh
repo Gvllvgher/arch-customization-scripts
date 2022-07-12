@@ -66,6 +66,9 @@ EOF
 # Enable the betterlockscreen service
 systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
 
+# Run configure-displays.sh script
+$SCRIPT_DIR/configure-displays.sh
+
 # Copy default configuration
 mkdir -p /home/$LOCAL_USER/.config/qtile
 cp /usr/share/doc/qtile/default_config.py /home/$LOCAL_USER/.config/qtile/config.py
