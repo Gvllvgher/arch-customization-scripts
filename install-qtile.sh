@@ -29,7 +29,7 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null
 pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm lightdm-slick-greeter xfce4-power-manager xorg-mkfontscale picom nodejs feh papirus-icon-theme arc-gtk-theme alsa-utils dmenu dunst rofi python-psutil python-dbus-next pulseaudio pavucontrol htop firefox flameshot thunar --noconfirm > /dev/null
 
 # Install Fonts
-pacman -S ttf-dejavu ttf-liberation ttf-bitstream-vera cantarell-fonts noto-fonts opendesktop-fonts ttf-opensans ttf-croscore ttf-carlito ttf-caladea ttf-jetbrains-mono --noconfirm > /dev/null
+$SCRIPT_DIR/install-fonts.sh -u $LOCAL_USER
 
 # Install Qtile and lightdm
 pacman -S qtile --noconfirm > /dev/null
@@ -58,7 +58,7 @@ EOT
 
 su $LOCAL_USER<<EOF
 set -e
-yay -S nerd-fonts-jetbrains-mono oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
+yay -S oranchelo-icon-theme betterlockscreen --noconfirm > /dev/null
 exit
 EOF
 
