@@ -23,5 +23,5 @@ if [[ -z "$LOCAL_USER" ]]; then
     exit 1
 fi
 
-pacman -Sy zsh --noconfirm > /dev/null
+pacman -Sy zsh zsh-syntax-highlighting zsh-autosuggestions --noconfirm > /dev/null
 chsh -s $(which zsh) $LOCAL_USER
