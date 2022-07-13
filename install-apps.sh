@@ -1,7 +1,8 @@
 #!/bin/bash
 
 pacmanApps=(
-    "exa" \
+    "exa
+    thefuck" \
     )
 
 pacman -S ${pacmanApps} --noconfirm > /dev/null 
