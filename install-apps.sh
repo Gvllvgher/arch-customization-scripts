@@ -2,6 +2,7 @@
 
 pacmanApps=(
     "exa
+    alacritty
     thefuck" \
     )
 
