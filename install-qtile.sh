@@ -31,6 +31,9 @@ pacman -S xorg-server xorg-xinit xterm xfce4-terminal lightdm lightdm-slick-gree
 # Install Fonts
 $SCRIPT_DIR/install-fonts.sh -u $LOCAL_USER
 
+# Install custom apps
+$SCRIPT_DIR/install-apps.sh
+
 # Install Qtile and lightdm
 pacman -S qtile --noconfirm > /dev/null
 
