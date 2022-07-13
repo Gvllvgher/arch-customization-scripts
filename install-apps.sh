@@ -28,7 +28,8 @@ pacmanApps=( \
     python-pip
     htop
     nodejs
-    thunar" \
+    thunar
+    neofetch" \
 )
 
 # Define apps that need to be installed with yay
