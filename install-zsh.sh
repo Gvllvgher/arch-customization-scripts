@@ -23,5 +23,9 @@ if [[ -z "$LOCAL_USER" ]]; then
     exit 1
 fi
 
-pacman -Sy zsh zsh-syntax-highlighting zsh-autosuggestions --noconfirm > /dev/null
+pacman -Sy zsh --noconfirm > /dev/null
 chsh -s $(which zsh) $LOCAL_USER
+
+mkdir -p /home/$LOCAL_USER/.zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/$LOCAL_USER/.zsh/zsh-autosuggestion
+git clone https://github.com/zsh-users/zsh-syntax-highlighting /home/$LOCAL_USER/.zsh/zsh-syntax-highlighting
