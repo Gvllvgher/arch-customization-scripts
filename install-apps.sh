@@ -34,7 +34,8 @@ pacmanApps=( \
     htop
     nodejs
     thunar
-    neofetch" \
+    neofetch
+    kitty" \
 )
 
 # Define apps that need to be installed with yay
