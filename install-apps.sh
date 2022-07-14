@@ -5,7 +5,6 @@ while getopts ':u:' opt; do
     case $opt in
         u)
             LOCAL_USER=${OPTARG}
-            echo "install-apps.sh: LOCAL_USER set to $LOCAL_USER"
             ;;
         \?)
             echo "Invalid option: -$OPTARG"
@@ -72,5 +71,4 @@ EOF
 # Section should only be used for very minor customizations
 # Example: enabling/starting services
 
-systemctl enable betterlockscreen@$LOCAL_USER
-systemctl start betterlockscreen@LOCAL_USER
+systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
