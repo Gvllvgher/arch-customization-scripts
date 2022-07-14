@@ -50,7 +50,7 @@ SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null
 pacman -S ${pacmanApps} --noconfirm > /dev/null
 
 # Install yay apps
-su $LOCAL_USER << EOF
+su $LOCAL_USER<<EOF
 set -e
 yay -S ${yayApps} --noconfirm > /dev/null
 exit
