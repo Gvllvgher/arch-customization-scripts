@@ -19,6 +19,7 @@ while getopts ':u:' opt; do
 done
 
 if [[ -z "$LOCAL_USER" ]]; then
+    echo "Use -u to define a user"
     exit 1
 fi
 
@@ -52,12 +53,12 @@ appScripts=( \
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
 # Install pacman apps
-pacman -S ${pacmanApps} --noconfirm > /dev/null
+pacman -S ${pacmanApps} --noconfirm &> /dev/null
 
 # Install yay apps
 su $LOCAL_USER<<EOF
 set -e
-yay -S ${yayApps}
+yay -S ${yayApps} --noconfirm > /dev/null
 exit
 EOF
 
