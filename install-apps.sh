@@ -58,7 +58,7 @@ pacman -S ${pacmanApps} --noconfirm &> /dev/null
 # Install yay apps
 su $LOCAL_USER<<EOF
 set -e
-yay -S ${yayApps} --noconfirm > /dev/null
+yay -S ${yayApps} --noconfirm &> /dev/null
 exit
 EOF
 
@@ -67,3 +67,10 @@ EOF
 #    chmod +x $script
 #    $script
 #done
+
+##################### App Customizations ########################
+# Section should only be used for very minor customizations
+# Example: enabling/starting services
+
+systemctl enable betterlockscreen@$LOCAL_USER
+systemctl start betterlockscreen@LOCAL_USER
