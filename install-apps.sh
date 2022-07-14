@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # We need to 'su' the local user, so we ask for that here
-while getopts ':u' opt; do
+while getopts ':u:' opt; do
     case $opt in
         u)
             LOCAL_USER=${OPTARG}
+            echo "install-apps.sh: LOCAL_USER set to $LOCAL_USER"
             ;;
         \?)
             echo "Invalid option: -$OPTARG"
@@ -16,6 +17,10 @@ while getopts ':u' opt; do
             ;;
     esac
 done
+
+if [[ -z "$LOCAL_USER" ]]; then
+    exit 1
+fi
 
 # Define apps that need to be installed with pacman
 pacmanApps=( \
@@ -52,7 +57,7 @@ pacman -S ${pacmanApps} --noconfirm > /dev/null
 # Install yay apps
 su $LOCAL_USER<<EOF
 set -e
-yay -S ${yayApps} --noconfirm > /dev/null
+yay -S ${yayApps}
 exit
 EOF
 
