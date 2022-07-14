@@ -35,7 +35,9 @@ pacmanApps=( \
     nodejs
     thunar
     neofetch
-    kitty" \
+    kitty
+    bluez
+    bluez-utils" \
 )
 
 # Define apps that need to be installed with yay
@@ -72,4 +74,9 @@ EOF
 # Section should only be used for very minor customizations
 # Example: enabling/starting services
 
+# Enable betterlockscreen
 systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
+
+# Enable bluetooth and load the btusb module
+modprobe btusb &> /dev/null
+systemctl enable bluetooth > /dev/null
