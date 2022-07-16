@@ -37,7 +37,15 @@ pacmanApps=( \
     neofetch
     kitty
     bluez
-    bluez-utils" \
+    bluez-utils
+    chromium
+    vim
+    net-tools
+    man
+    ufw
+    pulseaudio
+    pulseaudio-bluetooth
+    pavucontrol" \
 )
 
 # Define apps that need to be installed with yay
@@ -47,8 +55,8 @@ yayApps=( \
 
 # Define any scripts that install custom apps
 appScripts=( \
-    "$SCRIPT_DIR/apps/install-zsh.sh" \
     "$SCIPT_DIR/apps/install-yay.sh " \
+    "$SCRIPT_DIR/apps/install-zsh.sh" \
 )
 
 # Setting current script directory
@@ -65,10 +73,10 @@ exit
 EOF
 
 # Excute any custom app scripts
-#for script in ${appScripts[@]}; do
-#    chmod +x $script
-#    $script
-#done
+for script in ${appScripts[@]}; do
+    chmod +x $script
+    $script
+done
 
 ##################### App Customizations ########################
 # Section should only be used for very minor customizations
@@ -80,3 +88,7 @@ systemctl enable betterlockscreen@$LOCAL_USER > /dev/null
 # Enable bluetooth and load the btusb module
 modprobe btusb &> /dev/null
 systemctl enable bluetooth > /dev/null
+
+# UFW enable and enable
+systemctl enable ufw &> /dev/null
+ufw enable &> /dev/null
