@@ -47,7 +47,7 @@ pacmanApps=( \
     pulseaudio-bluetooth
     pavucontrol
     cups
-    cups-pdfi
+    cups-pdf
     nss-mdns
     onlyoffice
     avahi" \
