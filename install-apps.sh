@@ -65,7 +65,7 @@ appScripts=( \
 pacman -S ${pacmanApps} --noconfirm &> /dev/null
 
 # Install yay
-"$SCIPT_DIR/apps/install-yay.sh"
+"$SCRIPT_DIR/apps/install-yay.sh"
 
 # Install yay apps
 su $LOCAL_USER<<EOF
