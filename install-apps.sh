@@ -43,6 +43,7 @@ pacmanApps=( \
     net-tools
     man
     ufw
+    neovim
     pulseaudio
     pulseaudio-bluetooth
     pavucontrol
