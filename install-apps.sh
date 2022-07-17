@@ -50,12 +50,14 @@ pacmanApps=( \
     cups
     cups-pdf
     nss-mdns
-    avahi" \
+    avahi
+    ranger" \
 )
 
 # Define apps that need to be installed with yay
 yayApps=( \
     "betterlockscreen" \
+    "vtop" \
 )
 
 # Setting current script directory
@@ -76,6 +78,7 @@ pacman -S ${pacmanApps} --noconfirm &> /dev/null
 su $LOCAL_USER<<EOF
 set -e
 yay -S ${yayApps} --noconfirm &> /dev/null
+yay -S onlyoffice-bin --noconfirm &> /dev/null
 exit
 EOF
 
