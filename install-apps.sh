@@ -54,8 +54,7 @@ pacmanApps=( \
 
 # Define apps that need to be installed with yay
 yayApps=( \
-    "betterlockscreen
-    onlyoffice" \
+    "betterlockscreen" \
 )
 
 # Setting current script directory
