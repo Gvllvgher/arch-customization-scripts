@@ -45,7 +45,12 @@ pacmanApps=( \
     ufw
     pulseaudio
     pulseaudio-bluetooth
-    pavucontrol" \
+    pavucontrol
+    cups
+    cups-pdfi
+    nss-mdns
+    onlyoffice
+    avahi" \
 )
 
 # Define apps that need to be installed with yay
@@ -65,7 +70,7 @@ appScripts=( \
 pacman -S ${pacmanApps} --noconfirm &> /dev/null
 
 # Install yay
-"$SCRIPT_DIR/apps/install-yay.sh"
+"$SCRIPT_DIR/apps/install-yay.sh" -u justin
 
 # Install yay apps
 su $LOCAL_USER<<EOF
@@ -77,7 +82,7 @@ EOF
 # Excute any custom app scripts
 for script in ${appScripts[@]}; do
     chmod +x $script
-    $script
+    $script -u justin
 done
 
 ##################### App Customizations ########################
@@ -94,3 +99,11 @@ systemctl enable bluetooth > /dev/null
 # UFW enable and enable
 systemctl enable ufw &> /dev/null
 ufw enable &> /dev/null
+
+# Printing
+# Enable CUPS
+systemctl enable cups
+# Modify /etc/nsswitch.conf to enable hostname resolution
+sed -i 's/mymachines resolve/mymachines mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
+# Enable Avahi Daemon
+systemctl enable avahi-daemon.service
