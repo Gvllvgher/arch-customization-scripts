@@ -49,13 +49,13 @@ pacmanApps=( \
     cups
     cups-pdf
     nss-mdns
-    onlyoffice
     avahi" \
 )
 
 # Define apps that need to be installed with yay
 yayApps=( \
-    "betterlockscreen" \
+    "betterlockscreen
+    onlyoffice" \
 )
 
 # Setting current script directory
