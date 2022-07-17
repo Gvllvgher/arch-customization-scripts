@@ -53,17 +53,19 @@ yayApps=( \
     "betterlockscreen" \
 )
 
-# Define any scripts that install custom apps
-appScripts=( \
-    "$SCIPT_DIR/apps/install-yay.sh " \
-    "$SCRIPT_DIR/apps/install-zsh.sh" \
-)
-
 # Setting current script directory
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";     )" &> /dev/null && pwd 2> /dev/null;     )";
 
+# Define any scripts that install custom apps
+appScripts=( \
+    "$SCRIPT_DIR/apps/install-zsh.sh" \
+)
+
 # Install pacman apps
 pacman -S ${pacmanApps} --noconfirm &> /dev/null
+
+# Install yay
+"$SCIPT_DIR/apps/install-yay.sh"
 
 # Install yay apps
 su $LOCAL_USER<<EOF
