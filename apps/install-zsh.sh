@@ -25,6 +25,7 @@ fi
 
 pacman -Sy zsh --noconfirm > /dev/null
 chsh -s $(which zsh) $LOCAL_USER
+chsh -s $(which zsh)
 
 mkdir -p /home/$LOCAL_USER/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions /home/$LOCAL_USER/.zsh/zsh-autosuggestions
