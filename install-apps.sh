@@ -31,6 +31,7 @@ pacmanApps=( \
     alacritty
     thefuck
     python-pip
+    python-pillow
     htop
     nodejs
     thunar
