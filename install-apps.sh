@@ -25,6 +25,7 @@ fi
 # Define apps that need to be installed with pacman
 pacmanApps=( \
     "exa
+    npm
     firefox
     flameshot
     starship
