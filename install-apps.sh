@@ -59,6 +59,12 @@ pacmanApps=( \
 yayApps=( \
     "betterlockscreen" \
     "vtop" \
+    "chromium-extension-ublock-origin" \
+    "chromium-extension-dark-reader-git" \
+    "chromium-extension-clearurls" \
+    "bitwarden-chromium" \
+    "firefox-extension-bitwarden" \
+    "firefox-clearurls" \
 )
 
 # Setting current script directory
