@@ -77,15 +77,26 @@ appScripts=( \
 )
 
 # Install pacman apps
-pacman -S ${pacmanApps} --noconfirm &> /dev/null
+for pacApp in ${pacmanApps[@]}; do
+    echo "Installing $pacApp"
+    pacman -S $pacApp --noconfirm &> /dev/null
+done
 
 # Install yay
 "$SCRIPT_DIR/apps/install-yay.sh" -u justin
 
 # Install yay apps
+for yayApp in ${yayApps[@]}; do
+    echo "Installing $yayApp"
+    su $LOCAL_USER<<EOF
+set -e
+yay -S $yayApp --noconfirm &> /dev/null
+exit
+EOF
+done
+
 su $LOCAL_USER<<EOF
 set -e
-yay -S ${yayApps} --noconfirm &> /dev/null
 yay -S onlyoffice-bin --noconfirm &> /dev/null
 exit
 EOF
